@@ -1,0 +1,95 @@
+// menu_con_funciones.cpp : Este archivo contiene la función "main". La ejecución del programa comienza y termina ahí.
+//Autor: Fernanda Castilla
+//Fecha: 18/02/26
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int suma(int a, int b);
+int espar(int n);
+int contador(int n);
+float promedio(int cant);
+
+int main() {
+    int opcion;
+
+    do {
+        cout << "Elige una opcion:\n";
+        cout << "1. suma \n";
+        cout << "2. determinar si es impar o par\n";
+        cout << "3. imprimir los numeros\n";
+        cout << "4. calcular promedio\n";
+        cout << "0. Salir\n";
+        cout << "Opcion: ";
+        cin >> opcion;
+
+        switch (opcion) {
+        case 1: {
+            int a, b;
+            cout << "ingrese dos numeros:";
+            cin >> a;
+            cin >> b;
+            cout << "resultado:" << suma(a, b) << endl;
+            break;
+        }
+        case 2: {
+            int n;
+            cout << "ingrese un numero:";
+            cin >> n;
+            if (espar(n))
+                cout << "es par" << endl;
+            else
+                cout << "es impar" << endl;
+            break;
+        }
+        case 3: {
+            int n;
+            cout << "ingresa un numero limite:";
+            cin >> n;
+            contador(n);
+            break;
+        }
+        case 4: {
+            int cant;
+            cout << "cuantos numeros ingresara:";
+            cin >> cant;
+            cout << "promedio:" << promedio(cant) << endl;
+            break;
+        }
+        case 0:
+            cout << "¡Hasta luego!\n";
+            return 0;
+        default:
+            cout << "Opción no válida. Intenta de nuevo.\n";
+            break;
+        }
+
+    } while (opcion != 0);
+
+    return 0;
+}
+
+int suma(int a, int b) {
+    return a + b;
+}
+
+int espar(int n){
+    return (n % 2 == 0);
+}
+
+int contador(int n) {
+    for (int i = 1; i <= m; i++) {
+        cout << i << " ";
+    }
+    return n;
+}
+float promedio(int cant) {
+    float num, suma = 0;
+    for (int i = 1; i <= cant; i++) {
+        cout << "numero" << i << ":";
+        cin >> num;
+        suma += num;
+    }
+    return suma / cant;
+}
