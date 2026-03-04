@@ -1,0 +1,35 @@
+def factorial(numero):
+    if (numero ==0) or (numero ==1):
+        return 1
+    else:
+        return numero * factorial(numero -1)
+def suma(numero):
+    if numero == 1:
+        return 1
+    else:
+        return numero + suma(numero -1)
+def impares(numero):
+    if numero <=1:
+        return 1
+    elif numero %2==0:
+        return impares(numero -1)
+    else:
+        return numero + impares (numero -2)
+op=-1
+while op !=0:
+    print("---MENU---")
+    print("1. Factorial")
+    print("2. Suma de 1 a n")
+    print("3. Suma de impares")
+    print("0. Salir")
+    op = int(input("Elija una Opcion:"))
+    if op == 1:
+        num = int (input("Ingrese el numero: "))
+        print(factorial(num))
+    elif op == 2:
+        num = int(input("Ingrese el numero:"))
+        print(suma(num))
+    elif op == 3:
+        num = int(input("Ingrese el numero:"))
+        print (impares(num))
+print ("Programa Finalizado")
