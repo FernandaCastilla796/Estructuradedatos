@@ -17,6 +17,7 @@ def impares(numero):
         return numero + impares (numero -2)
 op=-1
 while op !=0:
+    print("\n")
     print("---MENU---")
     print("1. Factorial")
     print("2. Suma de 1 a n")
